@@ -22,7 +22,7 @@ model = PeftModel.from_pretrained(base_model, lora_path)
 processor = AutoProcessor.from_pretrained(lora_path, trust_remote_code=True)
 
 # 测试图像（请替换为你的医学图像路径）
-image_path = "test.jpg"  # 这里放一张测试图像
+image_path = "ct-images-in-covid19.png"  # 这里放一张测试图像
 image = Image.open(image_path).convert("RGB")
 
 # 构造对话
@@ -31,7 +31,7 @@ messages = [
         "role": "user",
         "content": [
             {"type": "image"},
-            {"type": "text", "text": "图中箭头所指的是什么穴位。"}
+            {"type": "text", "text": "这是什么病导致的肺部图像。"}
         ]
     }
 ]
