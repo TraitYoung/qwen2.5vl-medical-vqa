@@ -31,7 +31,7 @@ messages = [
         "role": "user",
         "content": [
             {"type": "image"},
-            {"type": "text", "text": "描述这张图片中的医学发现。"}
+            {"type": "text", "text": "图中箭头所指的是什么穴位。"}
         ]
     }
 ]
